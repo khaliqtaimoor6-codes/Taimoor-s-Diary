@@ -1,0 +1,365 @@
+/* Fade-in Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Glowing Border Animation */
+@keyframes glowBorder {
+    0%, 100% {
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(212, 175, 55, 0.03), 0 0 10px rgba(212, 175, 55, 0);
+    }
+    50% {
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(212, 175, 55, 0.06), 0 0 20px rgba(212, 175, 55, 0.15);
+    }
+}
+
+/* Animated Border Accent */
+@keyframes borderShimmer {
+    0% {
+        border-color: rgba(212, 175, 55, 0.1);
+    }
+    50% {
+        border-color: rgba(212, 175, 55, 0.3);
+    }
+    100% {
+        border-color: rgba(212, 175, 55, 0.1);
+    }
+}
+
+/* Floating Animation */
+@keyframes floatingText {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Shimmer Slide Animation */
+@keyframes shimmerSlide {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* Pulse Glow Animation */
+@keyframes pulseGlow {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+body {
+    font-family: 'Courier Prime', monospace;
+    color: #E0E0E0;
+    background-color: #1B1B1B;
+    background-image: url('path/to/your/paper-texture.png'); /* Add your texture image here */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+}
+
+h1 {
+    animation: floatingText 3s ease-in-out infinite;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    animation: fadeInUp 0.8s ease-out, glowBorder 4s ease-in-out infinite;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(212, 175, 55, 0.03);
+    background-color: rgba(27, 27, 27, 0.9);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    border-radius: 1px;
+    filter: sepia(0.1);
+    position: relative;
+}
+
+p {
+    line-height: 1.6;
+    font-size: 1.1em;
+    animation: fadeInUp 0.8s ease-out 0.1s backwards;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    p {
+        font-size: 1.15em;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .story-header h1 {
+        font-size: 1.8em;
+        letter-spacing: 2px;
+    }
+
+    .story-title {
+        font-size: 1.1em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+}
+
+/* Feedback Form Styles */
+.feedback-section {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #404040;
+}
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-family: 'Courier Prime', monospace;
+    color: #B0B0B0;
+    font-size: 0.95em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-input {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid #606060;
+    color: #E0E0E0;
+    font-family: 'Courier Prime', monospace;
+    padding: 10px 12px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: #909090;
+    box-shadow: 0 0 5px rgba(224, 224, 224, 0.1);
+}
+
+textarea.form-input {
+    resize: vertical;
+    font-family: 'Courier Prime', monospace;
+}
+
+/* Stamp-like Submit Button */
+.stamp-button {
+    align-self: flex-start;
+    background-color: transparent;
+    border: 2px solid #B0B0B0;
+    color: #B0B0B0;
+    font-family: 'Courier Prime', monospace;
+    font-size: 0.9em;
+    padding: 12px 24px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    position: relative;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.stamp-button:hover {
+    border-color: #E0E0E0;
+    color: #E0E0E0;
+    box-shadow: 0 0 10px rgba(224, 224, 224, 0.2), inset 0 0 0 1px rgba(224, 224, 224, 0.1);
+    transform: scale(1.05);
+}
+
+.stamp-button:active {
+    transform: scale(0.98);
+}
+
+/* Stories Directory Styles */
+.stories-directory {
+    margin-top: 50px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid #404040;
+    border-radius: 2px;
+}
+
+.stories-directory h2 {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+    color: #D4AF37;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.stories-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.story-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-left: 3px solid #606060;
+    border-radius: 1px;
+    transition: all 0.3s ease;
+    animation: borderShimmer 3s ease-in-out infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+.story-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+    animation: shimmerSlide 3s infinite;
+    pointer-events: none;
+}
+
+.story-item:hover {
+    background-color: rgba(212, 175, 55, 0.08);
+    border-left-color: #D4AF37;
+    transform: translateX(5px);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.15), inset 0 0 10px rgba(212, 175, 55, 0.05);
+}
+
+.story-meta {
+    margin-bottom: 8px;
+}
+
+.story-date {
+    font-size: 0.85em;
+    color: #909090;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.story-title {
+    display: inline-block;
+    font-family: 'Merriweather', serif;
+    font-size: 1.3em;
+    color: #E0E0E0;
+    text-decoration: none;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 8px 12px;
+    border: 2px dashed rgba(212, 175, 55, 0.4);
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background-color: rgba(212, 175, 55, 0.05);
+    transform: rotate(-1deg);
+}
+
+.story-title:hover {
+    color: #D4AF37;
+    border-color: #D4AF37;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+    letter-spacing: 1.5px;
+    background-color: rgba(212, 175, 55, 0.12);
+    transform: rotate(-1deg) scale(1.05);
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.25);
+}
+
+.story-snippet {
+    font-size: 0.95em;
+    color: #B0B0B0;
+    font-style: italic;
+    margin: 8px 0 0 0;
+    line-height: 1.5;
+}
+
+/* Story Page Styles */
+.back-link {
+    display: inline-block;
+    font-size: 0.9em;
+    color: #909090;
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    position: relative;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transform: skewX(-10deg);
+    background-color: rgba(212, 175, 55, 0.05);
+}
+
+.back-link:hover {
+    color: #D4AF37;
+    border-color: #D4AF37;
+    text-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
+    background-color: rgba(212, 175, 55, 0.1);
+    transform: skewX(-10deg) rotate(-2deg);
+    box-shadow: 2px 5px 15px rgba(212, 175, 55, 0.2);
+}
+
+.story-header {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #404040;
+}
+
+.story-header h1 {
+    font-size: 2.2em;
+    margin: 0 0 10px 0;
+    color: #D4AF37;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.story-subtitle {
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+    color: #B0B0B0;
+    font-size: 1.1em;
+    margin: 0;
+}
+
+.timeline-header {
+    color: #D4AF37;
+    font-size: 1.1em;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #606060;
+}
